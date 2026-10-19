@@ -764,7 +764,7 @@ html, body {
   box-shadow: var(--bubble-incoming-shadow);
 }
 
-/* Outgoing Bubble (Md Tabarak) */
+/* Outgoing Bubble (Tabarak) */
 .msg-row.outgoing .msg-bubble {
   background: var(--bubble-outgoing-bg);
   color: var(--bubble-outgoing-text);

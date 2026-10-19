@@ -331,10 +331,10 @@ export default function ChatApp() {
                   <img
                     className="lock-avatar-img"
                     src={chatData.me.avatar}
-                    alt="Md Tabarak"
+                    alt="Tabarak"
                   />
                 </div>
-                <span className="lock-avatar-tag">Md Tabarak 👑</span>
+                <span className="lock-avatar-tag">Tabarak 👑</span>
               </div>
 
               <div className="lock-heart-divider">💔🥀</div>
@@ -478,20 +478,6 @@ export default function ChatApp() {
               >
                 💖
               </button>
-              <button
-                className="btn-icon"
-                onClick={() => startCall(false)}
-                title="Voice Call Piyari"
-              >
-                📞
-              </button>
-              <button
-                className="btn-icon"
-                onClick={() => startCall(true)}
-                title="Video Call Piyari"
-              >
-                📹
-              </button>
             </div>
           </header>
 
@@ -607,13 +593,13 @@ export default function ChatApp() {
                         isCurrentMatch ? 'highlighted' : ''
                       }`}
                     >
-                      {/* Avatar for both Md Tabarak and Piyari beside their bubbles */}
+                      {/* Avatar for both Tabarak and Piyari beside their bubbles */}
                       {item.is_me ? (
                         <img
                           className="msg-avatar"
                           src={chatData.me.avatar}
                           alt={chatData.me.name}
-                          title="Md Tabarak 👑 (Click to preview)"
+                          title="Tabarak 👑 (Click to preview)"
                           onClick={() => setLightboxImg(chatData.me.avatar)}
                         />
                       ) : (
@@ -721,9 +707,9 @@ export default function ChatApp() {
                   }}
                   title="Click to view photo"
                 >
-                  <img className="couple-photo" src={chatData.me.avatar} alt="Md Tabarak" />
+                  <img className="couple-photo" src={chatData.me.avatar} alt="Tabarak" />
                 </div>
-                <span className="couple-name">Md Tabarak 👑</span>
+                <span className="couple-name">Tabarak 👑</span>
               </div>
 
               <div className="couple-heart-divider">💖</div>
@@ -756,7 +742,7 @@ export default function ChatApp() {
               </div>
               <div className="stat-card">
                 <div className="stat-number">{chatData.stats.mdMessages.toLocaleString()}</div>
-                <div className="stat-label">From Md Tabarak</div>
+                <div className="stat-label">From Tabarak</div>
               </div>
               <div className="stat-card">
                 <div className="stat-number">{chatData.stats.piyariMessages.toLocaleString()}</div>

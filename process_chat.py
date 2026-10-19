@@ -55,7 +55,7 @@ for idx, line in enumerate(lines):
             is_me = False
             piyari_count += 1
         elif sender == 'mdtabarakpiyari':
-            sender_name = 'Md Tabarak'
+            sender_name = 'Tabarak'
             is_me = True
             md_count += 1
         else:
@@ -128,8 +128,8 @@ chat_data = {
         'about': 'Always smiling with you 🌸',
     },
     'me': {
-        'name': 'Md Tabarak',
-        'title': 'Md Tabarak 👑',
+        'name': 'Tabarak',
+        'title': 'Tabarak 👑',
         'avatar': 'assets/tabarak.png',
         'phone': '+91 98765 43210'
     },
@@ -151,4 +151,4 @@ chat_data = {
 with open('chat_data.js', 'w', encoding='utf-8') as f:
     f.write('window.CHAT_DATA = ' + json.dumps(chat_data, ensure_ascii=False, indent=2) + ';')
 
-print(f"Successfully processed {len(items)} items ({md_count} from Md Tabarak, {piyari_count} from Piyari) across {len(dates_order)} dates.")
+print(f"Successfully processed {len(items)} items ({md_count} from Tabarak, {piyari_count} from Piyari) across {len(dates_order)} dates.")

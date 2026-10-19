@@ -1,8 +1,8 @@
 import './globals.css';
 
 export const metadata = {
-  title: 'Md Tabarak & Piyari 💕 • Sweet Chat Interface',
-  description: 'Romantic and cute chat interface for Md Tabarak and Piyari',
+  title: 'Tabarak & Piyari 💕 • Sweet Chat Interface',
+  description: 'Romantic and cute chat interface for Tabarak and Piyari',
 };
 
 export const viewport = {
