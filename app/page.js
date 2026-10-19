@@ -271,76 +271,12 @@ export default function ChatApp() {
     scrollToMatch(searchMatches[prevIdx]);
   };
 
-  // Send message
+  // Send message (disabled: read-only chat)
   const handleSendMessage = () => {
-    const text = inputValue.trim();
-    if (!text) return;
-
-    playCutePop();
-    const now = new Date();
-    let hours = now.getHours();
-    const minutes = now.getMinutes().toString().padStart(2, '0');
-    const ampm = hours >= 12 ? 'pm' : 'am';
-    hours = hours % 12 || 12;
-    const timeStr = `${hours}:${minutes} ${ampm}`;
-
-    const newMsg = {
-      id: Date.now(),
-      type: 'message',
-      date: 'Today',
-      time: timeStr,
-      sender: chatData.me.name,
-      is_me: true,
-      text: text,
-      is_deleted: false
-    };
-
-    setMessages((prev) => [...prev, newMsg]);
     setInputValue('');
-
-    setTimeout(() => {
-      if (messagesContainerRef.current) {
-        messagesContainerRef.current.scrollTop = messagesContainerRef.current.scrollHeight;
-      }
-    }, 50);
-
-    // Simulate cute reply from Piyari
-    setTimeout(() => {
-      setPiyariStatus('typing a sweet reply... 💕');
-    }, 600);
-
-    setTimeout(() => {
-      setPiyariStatus('online • in your heart ✨');
-      const sweetReplies = [
-        "Hii jaaneman 💕",
-        "Aapne khana khaye? 🥺",
-        "Bolye meri jaan 🥰",
-        "Mast lag rahe ho Tabarak ✨",
-        "Ghar kab aaoge? 🌸"
-      ];
-      const replyText = sweetReplies[Math.floor(Math.random() * sweetReplies.length)];
-
-      const replyMsg = {
-        id: Date.now() + 1,
-        type: 'message',
-        date: 'Today',
-        time: timeStr,
-        sender: chatData.contact.name,
-        is_me: false,
-        text: replyText,
-        is_deleted: false
-      };
-
-      setMessages((prev) => [...prev, replyMsg]);
-      playCutePop();
-
-      setTimeout(() => {
-        if (messagesContainerRef.current) {
-          messagesContainerRef.current.scrollTop = messagesContainerRef.current.scrollHeight;
-        }
-      }, 50);
-    }, 2200);
   };
+
+
 
   const handleKeyDown = (e) => {
     if (e.key === 'Enter' && !e.shiftKey) {
@@ -772,13 +708,13 @@ export default function ChatApp() {
               <textarea
                 className="chat-textarea"
                 rows={1}
-                placeholder="Type a sweet message to Piyari..."
-                value={inputValue}
-                onChange={(e) => setInputValue(e.target.value)}
-                onKeyDown={handleKeyDown}
+                placeholder="Ye sirf padhne ke liye hai 💕"
+                value=""
+                disabled
+                readOnly
               />
             </div>
-            <button className="btn-send" onClick={handleSendMessage} title="Send message">
+            <button className="btn-send" disabled title="Sending disabled">
               ➤
             </button>
           </footer>
