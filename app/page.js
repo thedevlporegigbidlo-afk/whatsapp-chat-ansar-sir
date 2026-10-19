@@ -682,28 +682,6 @@ export default function ChatApp() {
 
           {/* Input Bar */}
           <footer className="chat-input-bar">
-            <div className="quick-stickers-row">
-              {[
-                'Bolo jaaneman 💕',
-                'Khana khaye? 🌸',
-                'Meri jaan 🥰',
-                'Photo bhejo na 🥺',
-                'Mast lag rahi ho ✨',
-                'Zaroori tha 🥀'
-              ].map((sticker) => (
-                <div
-                  key={sticker}
-                  className="sticker-pill"
-                  onClick={() => {
-                    playCutePop();
-                    setInputValue((prev) => (prev ? prev + ' ' : '') + sticker);
-                  }}
-                >
-                  {sticker}
-                </div>
-              ))}
-            </div>
-
             <div className="input-field-wrap">
               <textarea
                 className="chat-textarea"
